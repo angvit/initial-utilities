@@ -2,6 +2,8 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]){
+    char buff[10000];
+
     if (argc == 1){
         printf("");
         exit(0);
@@ -14,8 +16,6 @@ int main(int argc, char *argv[]){
             printf("wcat: cannot open file\n");
             exit(1);
         }
-        
-        char buff[10000];
         
         while (fgets(buff, sizeof(buff), fp) != NULL){
             printf("%s", buff);
