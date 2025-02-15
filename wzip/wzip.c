@@ -42,7 +42,7 @@ int main(int argc, char *argv[]){
 
     for (int i=1; i<argc; i++){
         FILE *fp = fopen(argv[i], "r");
-        
+
         encode(fp, &previous, &rLen, &firstFile);
         fclose(fp);
     }
